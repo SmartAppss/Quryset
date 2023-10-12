@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, tr,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+   
+   
+<table>
+    <h1 style="text-align: center;">Students Information</h1>
+        
+    <th>id</th>
+    <th>name</th>
+    <th>city</th>
+    <th>roll</th>
+    <th>marks</th>
+    <th>pass_date</th>
+    <th>admdatetime</th>
+
+    {% for studs in stud %}
+
+    <tr>
+     <td>{{ studs.id }}</td>
+     <td>{{ studs.name }}</td>
+     <td>{{ studs.city }}</td>
+     <td>{{ studs.roll }}</td>
+     <td>{{ studs.marks }}</td>
+     <td>{{ studs.pass_date }}</td>
+     <td>{{ studs.admdatetime }}</td>
+
+    </tr>
+    {% endfor %}
+ 
+</table> 
+
+   
+</body>
+
+</html>
+<!--
+<h3>avreage data: {{ average }}</h3>
+<h1>average data: {{average.marks__avg}}</h1><hr>
+
+<h3>maximum  data: {{ maximum }}</h3>
+<h1>average data: {{maximum.marks__max}}</h1> <hr>
+
+<h3>minimum  data: {{ minimum }}</h3>
+<h1>minimum data: {{minimum.marks__min}}</h1> <hr>
+
+<h3>sum  data: {{ sum }}</h3>
+<h1>sum data: {{sum.marks__sum}}</h1> <hr>
+
+<h3>count  data: {{ count }}</h3>
+<h1>count data: {{count.marks__count}}</h1>  <hr>> -->
